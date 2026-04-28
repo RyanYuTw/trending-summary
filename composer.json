@@ -1,0 +1,58 @@
+{
+    "name": "tnlmedia/trending-summary",
+    "description": "RSS 趨勢文章摘要產製系統 — 從 RSS feed 抓取文章，比對搜尋趨勢後改寫為高品質繁體中文摘要的 Laravel Package",
+    "type": "library",
+    "license": "proprietary",
+    "keywords": [
+        "laravel",
+        "rss",
+        "trending",
+        "summary",
+        "ai",
+        "content-generation"
+    ],
+    "authors": [
+        {
+            "name": "Vendor",
+            "email": "dev@vendor.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/support": "^12.0",
+        "willvincent/feeds": "^2.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "orchestra/testbench": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TnlMedia\\TrendingSummary\\": "src/",
+            "TnlMedia\\TrendingSummary\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TnlMedia\\TrendingSummary\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TnlMedia\\TrendingSummary\\TrendingSummaryServiceProvider"
+            ],
+            "aliases": {
+                "TrendingSummary": "TnlMedia\\TrendingSummary\\Facades\\TrendingSummary"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
